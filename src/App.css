@@ -1,0 +1,20 @@
+.App {
+  height: 100%;
+}
+
+.div-card{
+  width: 1000px;
+  margin: auto;
+}
+
+.card-table{
+  margin: 20px 0 0 0;
+}
+
+.button-create{
+  margin: 0 0 20px 0;
+}
+
+.button-edit{
+  margin-right: 10px;
+}

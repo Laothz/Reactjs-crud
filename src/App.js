@@ -10,12 +10,22 @@ import Card from 'react-bootstrap/Card'
 import Table from 'react-bootstrap/Table'
 import Modal from 'react-bootstrap/Modal'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import axios from 'axios';
 
 function App() {
   
   const [showModalForm, setShowModalForm] = useState(false);
   const [showModalConfirmDelete, setShowModalConfirmDelete] = useState(false);
   const [userEdit, setUserEdit] = useState();
+
+  const baseURL = 'http://localhost:3001';
+
+  useEffect(() => {
+    axios.get(baseURL)
+      .then(res => {
+        console.log(res);
+      });
+  }, []);
 
   const userList = [
     { id: 1, email: "teste@teste", password: "teste", confirmPassword: "teste" },
